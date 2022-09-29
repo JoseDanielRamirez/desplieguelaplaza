@@ -34,8 +34,9 @@ public class ProductController {
         this.producersList = this.producerRepository.findAllSortByName();
     }
 
+    
 
-    @GetMapping("/productos")
+    @GetMapping("/")
     public String crudp(Model model) {
         model.addAttribute("products", productService.getAllProduct());
         return "productos";
